@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Chen</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/62c99cb556.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="" class="logo"> <!-- include logo here-->
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <!-- <li><a href="#services">Experience</a></li> -->
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- <i class="fa-solid fa-xmark" onclick="closemenu()"></i> -->
+            </ul>
+            <!-- <i class="fa-solid fa-bars" onclick="openmenu()"></i> -->
+        </nav>
+        <div class="header-text">
+            <h1>Hi There, 
+            <br>I'm <span>Jason Chen</span></h1> 
+        </div>
+    </div>
+</div>
+<!-- About--> 
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/sunset.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm a data science enthusiasts interested in the LLM and Machine Learning. I'm currently majoring in data science at Boston University. When I'm not at my desk coding, I'm usually gymming, rock climbing, petting cats, or enjoying the sunset. I like listening to R&B from artists like The Weeknd. </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming</span><br>Python, SQL, R, Rust, HTML, CSS, JavaScript</li>
+                        <li><span>Frameworks & Tools</span><br>NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, TensorFlow, Statsmodels, Keras</li>
+                        <li><span>Data Science Skills</span><br>Machine Learning (Supervised and Unsupervised), Neural Network, Time Series Analysis, Data Visualization, Statistical Analysis, Natural Language Processing, Feature Engineering</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>CEET Research Assistant @ University of Massachusetts Amherst</span><br>Build and extended CarbonCast to include the US and EU regions. Wrote python scripts to for data cleaning and preprocessing for both the frontend and backend.
+                        Introduce new metrics and machine learning models based on the regions and seasonal patterns. </li>
+                        <li><span>Data Analyst Intern @ Authentic Carribean Foundation Inc</span><br>Perform data analysis on qualitative and quantitative data through the use of Excel. Produce data visualization and dashboard for the stockholders by using Excel and Power BI. </li>
+                        <li><span> Course Assistant @ Faculty of Computing and Data Science</span><br>Assisted with course administration, managed student inquiries, and provided support for academic projects. Facilitated hands-on sessions and contributed to course materials.</li>
+                        <li><span>IT Support Specialist @ IT Help Center</span><br>Provided technical support and troubleshooting for IT issues. Implemented service coverage for all faculty and devices.</li>
+
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Boston University</span><br>Degree: Bachelor of Science
+                        <br> Major: Data Science 
+                        <br>Expected Graduation: May 2026 </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- services -->
+<!-- <div id="services">
+    <div class="containers">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>Description for the webd esign</p>
+            <a href="#">Learn more</a>
+            </div>
+            <div>
+            <i class="fa-solid fa-crop"></i>
+            <h2>UI Design</h2>
+            <p>Description for the webd esign</p>
+            <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-apple"></i>
+                <h2>App Design</h2>
+                <p>Description for the webd esign</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- portfolio -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="worklist">
+            <div class="work">
+                <img src="images/sunset2.jpg">
+                <div class="layer">
+                    <h3>Apple Stock Prediction</h3>
+                    <p>Uses python and sql to forecast the stock price of Apple within the next 3 years.</p>
+                    <a href="https://github.com/jachen2956/Apple_Stock"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/sunset3.jpg">
+                <div class="layer">
+                    <h3>Cyberbullying Classification</h3>
+                    <p>Uses multi-classification and binary-classification to classified words and tweets into different categories of cyberbullying.</p>
+                    <a href="https://github.com/jachen2956/Cyberbullying"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/sunset4.jpg">
+                <div class="layer">
+                    <h3>CarbonCast</h3>
+                    <p>Multi-day forecasting tool uses to forecast the carbon intensity of the US and EU regions.</p>
+                    <a href="https://github.com/carbonfirst/CarbonCast"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/jachen2956" class="btn">See more</a>
+    </div>
+</div>
+
+<!-- contact -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p> <i class="fa-solid fa-paper-plane"></i> jachen7@bu.edu</p>
+                <p> <i class="fa-solid fa-phone"></i> 718-866-7738</p>
+                <div class="social-icons">
+                    <a href="https://instagram.com/jjas.chen"><i class="fa-brands fa-instagram"></i></a> 
+                    <!-- enter link -->
+                    <a href="https://www.linkedin.com/in/jason-chen-8a139329a"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/jachen2956"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="images/Resume.pdf" download class="btn btn2">Download CV</a>
+                <!-- add files images/cv  -->
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Inspiration from GreatStack</p>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname) {
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz6UYnapve8JX8ulqtRMqFayfIsPQSLOzcsHq58SnbU5mR2miNLvAwTduEM_jpsz1ws/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
