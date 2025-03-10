@@ -1,3 +1,13 @@
+:root {
+    --gradient-1: #1a1f3d;  /* About section - darkest navy */
+    --gradient-2: #242952;  /* Experiences section */
+    --gradient-3: #2d3367;  /* Projects section */
+    --gradient-4: #363d7c;  /* Contact section - lightest navy */
+    --text-color: #64ffda;  /* Mint green text */
+    --highlight-color: #7ee6fd;  /* Light blue highlight */
+    --secondary-text: #ccd6f6;  /* Light gray for regular text */
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -8,21 +18,24 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: #080808;
-    color: #fff;
+    background: var(--gradient-1);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/personal2.JPG); 
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/personal2.JPG);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
 .container{
     padding: 10px 10%;
-
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 nav{
@@ -30,6 +43,9 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 20px 0;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
 }
 
 .logo{
@@ -44,17 +60,22 @@ nav ul li{
 }
 
 nav ul li a{
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: var(--primary-color);
     position: absolute ;
     left: 0;
     bottom: -6px;
@@ -65,9 +86,15 @@ nav ul li a:hover::after{
     width: 100%;
 }
 
+nav ul li a:hover {
+    color: var(--highlight-color);
+    transform: translateY(-2px);
+}
+
 .header-text{
     margin-top: 20%;
     font-size: 30px;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .header-text h1{
@@ -76,11 +103,12 @@ nav ul li a:hover::after{
 }
 
 .header-text h1 span{
-    color: #ff004f;
+    color: var(--primary-color);
 }
 
 /* -------------about------------ */
 #about{
+    background: var(--gradient-1);
     padding: 80px 0;
     color: #ababab;
 }
@@ -91,14 +119,18 @@ nav ul li a:hover::after{
     flex-wrap: wrap;
 }
 
-.about-col-1{
+.about-col-1 {
     flex-basis: 35%;
+    display: flex;          
+    justify-content: center; 
+    align-items: flex-start; 
 }
 
-.about-col-1 img{
+.about-col-1 img {
     width: 100%;
+    max-width: 300px;        
     border-radius: 15px;
-
+    margin-top: -70px;     
 }
 
 .about-col-2{
@@ -106,9 +138,20 @@ nav ul li a:hover::after{
 }
 
 .sub-title{
-    font-size: 60px;
-    font-weight:600 ;
-    color: #fff;
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.sub-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60%;
+    height: 2px;
+    background: var(--text-color);
 }
 
 .tab-titles{
@@ -122,13 +165,15 @@ nav ul li a:hover::after{
     font-weight: 500;
     cursor: pointer;
     position: relative;
+    transition: color 0.3s ease;
+    color: var(--text-color);
 }
 
 .tab-links::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: var(--primary-color);
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -139,13 +184,17 @@ nav ul li a:hover::after{
     width: 50%;
 }
 
+.tab-links:hover {
+    color: var(--highlight-color);
+}
+
 .tab-contents ul li {
     list-style: none;
     margin: 10px 0;
 }
 
 .tab-contents ul li span{
-    color: #ff004f;
+    color: var(--primary-color);
     font-size: 14px;
 }
 
@@ -159,6 +208,7 @@ nav ul li a:hover::after{
 
 /* experiences  */
 #experiences {
+    background: var(--gradient-2);
     padding: 80px 0;
     color: #ababab;
 }
@@ -170,25 +220,25 @@ nav ul li a:hover::after{
 }
 
 .experience {
-    background-color: #1e1e1e;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.1);
     padding: 20px;
-    margin-bottom: 40px;
     border-radius: 15px;
+    transition: all 0.3s ease;
 }
 
-.sub-title {
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 40px;
+.experience:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .experience h4 {
-    font-size: 28px;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--highlight-color);
 }
 
 .experience ul {
@@ -197,34 +247,37 @@ nav ul li a:hover::after{
 }
 
 .experience ul li {
-    margin: 10px 0;
+    margin: 15px 0;
+    padding-left: 25px;
+    position: relative;
+    color: var(--secondary-text);
+    line-height: 1.7;
 }
 
 .experience ul li::before {
-    content: "•";
-    color: #ff004f;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--text-color);
 }
 
 .experience ul li span {
-    color: #ff004f;
+    color: var(--primary-color);
 }
 
 a {
-    color: #ff004f;
+    color: #64ffda;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #ff3366;
+    color: #7ee6fd;
 }
 
 /* projects  */
 #projects {
+    background: var(--gradient-3);
     padding: 80px 0;
     color: #ababab;
 }
@@ -236,25 +289,25 @@ a:hover {
 }
 
 .project {
-    background-color: #1e1e1e;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.1);
     padding: 20px;
-    margin-bottom: 40px;
     border-radius: 15px;
+    transition: all 0.3s ease;
 }
 
-.sub-title {
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 40px;
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .project h4 {
-    font-size: 28px;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--highlight-color);
 }
 
 .project ul {
@@ -263,175 +316,63 @@ a:hover {
 }
 
 .project ul li {
-    margin: 10px 0;
+    margin: 15px 0;
+    padding-left: 25px;
+    position: relative;
+    color: var(--secondary-text);
+    line-height: 1.7;
 }
 
 .project ul li::before {
-    content: "•";
-    color: #ff004f;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--text-color);
 }
 
 .project ul li span {
-    color: #ff004f;
+    color: var(--primary-color);
 }
 
 a {
-    color: #ff004f;
+    color: #64ffda;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #ff3366;
+    color: #7ee6fd;
 }
 
-/* services */
-/* #services{
-    padding: 30px 0;
-
+/* Contact section styling */
+#contact {
+    background: var(--gradient-4);
+    padding: 80px 0;
+    color: #ababab;
 }
 
-.services-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.services-list div{
-    background: #262626;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
-}
-
-.services-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
-
-}
-
-.services-list div h2{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-.services-list div a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.services-list div:hover{
-    background: #ff004f;
-    transform: translateY(-10px);
-
-} */
-
-/* portfolio */
-/* #portfolio{
-    padding: 50px 0;
-}
-
-.work-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;    
-    margin-top: 50px;
-
-}
-
-.work{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    height: 300px;
-}
-
-.work img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    display: block;
-    object-fit: cover;
-    object-position: center;
-    transition: transform 0.5s ;
-}
-
-.layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40;
-    text-align: center;
-    font-size: 14px;
-    transition: height 0.5s ease;
-
-}
-
-.layer h3{
-    font-weight: 500;
+.contact-left, .contact-right {
     margin-bottom: 20px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
 }
 
-.layer a{
-    margin-top: 20px;
-    color: #ff004f;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-}
-
-.work:hover img{
-    transform: scale(1.1);
-}
-
-.work:hover .layer{
-    height: 100%;
-}
-
-.btn{
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #ff004f;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #fff;
-    transition: background 0.5s;
-}
-
-.btn:hover{
-    background: #ff004f;
-} */
-
-/* contact */
 .contact-left {
     flex-basis: 35%;
+    text-align: center;
+    font-size: 18px; 
+    line-height: 2; 
 }
 
 .contact-right {
@@ -440,91 +381,106 @@ a:hover {
 
 .contact-left p {
     margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-left p i {
-    color: #ff004f;
+    color: var(--text-color);
     margin-right: 15px;
     font-size: 25px;
 }
 
 .social-icons {
-    margin-top: 30px;
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
 
 .social-icons a {
-    text-decoration: none;
-    font-size: 30px;
+    color: var(--text-color); /* Match icon color with text */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
     margin-right: 15px;
-    color: #ababab;
-    display: inline-block;
-    transition: transform 0.5s;
+    transition: all 0.3s ease;
 }
 
 .social-icons a:hover {
-    color: #ff004f;
+    background: var(--highlight-color);
     transform: translateY(-5px);
+    color: var(--gradient-1); /* Change color on hover */
 }
 
-.btn.btn2 {
+/* Ensure button sizes match */
+.btn.btn2, 
+.contact-right form .btn2 {
+    background: var(--highlight-color);
+    color: var(--gradient-4);
+    padding: 12px 25px; /* Match padding for equal sizing */
+    border-radius: 30px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
     display: inline-block;
-    background: #ff004f;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
     text-align: center;
+    font-size: 16px;
+}
+
+.btn.btn2:hover, 
+.contact-right form .btn2:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(100,255,218,0.3);
 }
 
 .contact-left .btn2 {
-    margin-top: 20px; 
+    margin-top: 40px;
+    display: inline-block;
 }
 
 .contact-right form {
-    width: 100%;
+    display: grid;
+    gap: 15px;
 }
 
 form input, form textarea {
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: #262626;
-    padding: 15px;
-    margin: 15px 0;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 6px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--secondary-text);
+    font-size: 16px;
+    margin-bottom: 15px;
 }
 
-form .button-container {
-    display: flex;
-    justify-content: center; 
-    margin-top: 20px; 
+form textarea {
+    min-height: 150px;
+    margin-bottom: 0;
 }
 
-form .btn2 {
-    padding: 14px 60px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-form .button-container {
-    display: flex;
-    justify-content: space-between; 
-    margin-top: 20px; 
+.button-container {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .copyright {
-    width: fit-content;
-    text-align: left;
-    padding: 10px 0;
-    background: #262626;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: var(--gradient-4);
+    color: var(--secondary-text);
     font-weight: 300;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
-.copyright i {
-    color: #ff004f;
+.copyright p {
+    color: var(--secondary-text);
 }
 
 /* for normal-size screen  */
@@ -541,70 +497,261 @@ nav .fas{
 
 }
 
-@media only screen and (max-width:600px){
-    #header{
-        background-image: url(images/personal2.JPG);
-        /* include smaller images phone screen */
-    }
-    .header-text{
-        margin-top: 100%;
-        font-size: 16px;
-    }
-    .header-text h1{
-        font-size: 30px;
-    }
-    nav .fas{
-        display: block;
-        font-size: 25px;
-    }
-    nav ul{
-        background: #ff004f;
+@media only screen and (max-width: 600px) {
+    nav ul {
+        background: var(--gradient-4);
         position: fixed;
         top: 0;
-        right: -200px;
+        right: -200px; /* Hidden by default */
         width: 200px;
         height: 100vh;
-        padding: top 50px;
+        padding-top: 50px; /* Fixed the padding-top property */
         z-index: 2;
         transition: right 0.5s;
     }
-    nav ul li{
+    
+    nav ul li {
         display: block;
         margin: 25px;
     }
-    nav ul .fas{
+    
+    nav ul .fas {
         position: absolute;
         top: 25px;
         left: 25px;
         cursor: pointer;
     }
-    .sub-title{
-        font-size: 40px;
-    }
-
-    .about-col-1,.about-col-2{
-        flex-basis: 100%;
-    }
-    .about-col-1{
-        margin-bottom: 30px;
-    }
-    .about-col-2{
-        font-size: 14px;
-    }
-    .tab-links{
-        font-size: 16px;
-        margin-right: 20px;
-    }
-    .contact-left, .contact-right{
-        flex-basis: 100%;
-    }
-    .copyright{
-        font-size: 14px;
+    
+    /* Show menu icon on mobile */
+    nav .fa-solid.fa-bars {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
     }
 }
 
-#msg{
-    color: #61b752;
-    margin-top: -40px;
+/* Center the about section image and make it responsive */
+.about-col-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-col-1 img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Reduce spacing in skills section */
+.tab-contents ul li {
+    list-style: none;
+    margin: 5px 0; /* Reduced from 10px */
+}
+
+.tab-contents ul li span {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 600;
     display: block;
+    margin-bottom: 2px; /* Added small margin */
+}
+
+/* Center contact section icons and form */
+.contact-left p {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Changed from center to flex-start */
+    padding-left: 20%; /* Add padding to move icons to the right */
+}
+
+@media only screen and (max-width: 600px) {
+    .contact-left p {
+        padding-left: 10%; /* Less padding on mobile */
+    }
+}
+
+/* Move the send message button down */
+.button-container {
+    margin-top: 15px; /* Increased from 0 */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Better presentation of the About section on small screens */
+@media only screen and (max-width: 600px) {
+    .about-col-1 {
+        margin-bottom: 20px;
+    }
+    
+    .about-col-1 img {
+        max-width: 250px; /* Smaller image on mobile */
+    }
+    
+    .about-col-2 p {
+        padding: 0 5px;
+        text-align: justify;
+    }
+    
+    .tab-titles {
+        justify-content: center;
+        margin: 15px 0 30px;
+    }
+    
+    .tab-links {
+        margin-right: 20px;
+        font-size: 16px;
+    }
+    
+    .tab-contents ul {
+        padding: 0 5px;
+    }
+}
+
+/* Fix the scroll menu issue */
+#sidemenu.active {
+    right: 0 !important;
+}
+
+/* Make the X button visible when menu is active */
+.fa-solid.fa-xmark {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .fa-solid.fa-xmark {
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+}
+
+/* Hover effects for experience and project cards */
+.experience:hover, .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Hover effects for buttons */
+.btn:hover, .btn2:hover {
+    transform: translateY(-2px);
+    background-color: var(--highlight-color);
+}
+
+/* Hover effects for form inputs */
+form input:focus, form textarea:focus {
+    border-color: var(--highlight-color);
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.2);
+}
+
+/* Hover effects for social icons */
+.social-icons a:hover {
+    transform: translateY(-5px) scale(1.1);
+    color: var(--highlight-color);
+}
+
+/* Hover effects for tab links */
+.tab-links:hover {
+    color: var(--highlight-color);
+}
+
+/* Animation for page load */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.header-text, .about-col-2, .experience, .project {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Add these CSS rules to your styles.css file */
+
+/* Floating menu that appears after scrolling */
+.scroll-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(26, 31, 61, 0.9); /* Using your dark navy with transparency */
+    backdrop-filter: blur(10px);
+    padding: 10px 15px;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none; /* Hidden by default */
+    transition: all 0.3s ease;
+}
+
+.show-scroll-menu .scroll-menu {
+    display: flex; /* Show when body has this class */
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.scroll-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.scroll-menu ul li {
+    margin: 0 10px;
+}
+
+.scroll-menu ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.scroll-menu ul li a:hover,
+.scroll-menu ul li a.active-nav {
+    color: var(--highlight-color);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Active navigation indicator for both navbar and scroll menu */
+#sidemenu li a.active-nav,
+.scroll-menu ul li a.active-nav {
+    color: var(--highlight-color);
+    font-weight: 600;
+    position: relative;
+}
+
+#sidemenu li a.active-nav::after,
+.scroll-menu ul li a.active-nav::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background: var(--highlight-color);
+    bottom: -4px;
+    left: 25%;
+}
+
+/* Media queries for mobile */
+@media only screen and (max-width: 768px) {
+    .scroll-menu {
+        right: auto;
+        left: 20px;
+        padding: 8px 12px;
+    }
+    
+    .scroll-menu ul li {
+        margin: 0 5px;
+    }
+    
+    .scroll-menu ul li a {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
 }

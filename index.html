@@ -8,8 +8,19 @@
     <script src="https://kit.fontawesome.com/62c99cb556.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<!-- Header Section -->
 <div id="header">
     <div class="container">
+        <div class="scroll-menu">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experiences">Experiences</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Replace the nav section in your index.html with this -->
         <nav>
             <img src="" class="logo"> <!-- include logo here -->
             <ul id="sidemenu">
@@ -23,211 +34,177 @@
             <!-- <i class="fa-solid fa-bars" onclick="openmenu()"></i> -->
         </nav>
         <div class="header-text">
-            <h1>Hi There, 
-            <br>I'm <span>Jason Chen</span></h1> 
+            <h1>Hi There, <br>I'm <span>Jason Chen</span></h1> 
         </div>
     </div>
 </div>
-<!-- About--> 
+
+<!-- About Section -->
 <div id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/sunset.jpg">
+                <img src="images/personal.JPG">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p> Hi everyone! I am currently an undergraduate student majoring in <a href="https://www.bu.edu/cds-faculty/">data science</a> at Boston University. I am a data science enthusiasts interested in LLM and machine learning in the biomedical and fintech industry. When I am not looking at my computer screens, I like going to the gym and visiting cat cafes. Some of my favorite hobbies are watching the sunset, while listening to R&B artists like The Weeknd. </p>
+                <p> Hi everyone! I am currently an undergraduate student majoring in <a href="https://www.bu.edu/cds-faculty/">data science</a> at Boston University. 
+                    I am a data science enthusiast interested in green computing, biomedical computation, data privacy, and human-computer interaction. 
+                    When I am not at my computer screens, you will likely find me lifting weights, rock climbing, or reading. 
+                    Some of my favorite hobbies are watching the sunset and listening to R&B artists like The Weeknd. </p>
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
-                        <li><span>Programming</span><br>Python, SQL, R, Rust, HTML, CSS, JavaScript</li>
-                        <li><span>Frameworks</span><br>NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, TensorFlow, Statsmodels, SciPy</li>
-                        <li><span>Tools</span><br>Microsoft Azure, Microsoft Power BI, Tableau, Visual Studio Code, Jupyter Notebooks, Git & Github </li>
-                        <li><span>Data Science Skills</span><br>Machine Learning (Supervised and Unsupervised), Neural Network, Time Series Analysis, Data Visualization, Statistical Analysis, Natural Language Processing, Feature Engineering, ETL/ELT, Pipeline Development, Optimization</li>
+                        <li><span>Programming:</span>Python, SQL, R, Rust, HTML, CSS, JavaScript</li>
+                        <li><span>Tools:</span> ArcGIS, Microsoft Azure, Power BI, Tableau, MySQL, Google BigQuery, Docker, Git </li>
                     </ul>
                 </div>
-                </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- experience  -->
+<!-- Experiences Section -->
 <div id="experiences">
     <div class="container">
-        <h1 class="sub-title">Experiences</h1>
-        <div id="experience-list">
-            <!-- Experience 1 -->
-            <div class="experience">
-            <h4>CEET Research Intern @ University of Massachusetts Amherst | June 2024 - August 2024</h4>
-            <br> During this summer, I have the honor to participate in REU CEET at University of Massachusetts Amherst. I was under the amazing mentorship of Diptyaroop Maji, Abel Souza, and Prof.Sitaraman. I also like to express my gratitude to Zoe Getman-Pickering for the opportunity at the program. 
-            In the program, I work on a project known as  <a href="https://lass.cs.umass.edu/papers/pdf/buildsys2022-carboncast.pdf">CarbonCast</a>, the first open source tool of its kind! CarbonCast is a multi-day forecasting tool that utilizes neural network to forecast carbon intensity of different regions.
-            <br> Tools/Techniques: Python (Pandas, Numpy, Seaborn, Matplotlib, Tensorflow), Git, Docker
+        <h1 class="sub-title"><strong>Experiences</strong></h1>
+        <div class="experience">
+            <h4>Machine Learning Research Assistant (UROP) @ Kolachalama Lab </h4>
+            <h4>September 2024 - Present</h4>
+            <p class="tools">Mentor: Chonghua Xue</p>
             <ul>
-                <li>Enhanced the model's accuracy and regional applicability by collecting and integrating data for 50+ regions using custom Python scripts, resulting in improved carbon intensity (CI) predictions.</li>
-                <li>Achieved optimal model selection for first-tier forecasts by analyzing forecast data using Pandas and Seaborn, resulting in an 15% increase in forecasts accuracy.</li>
-                <li>Conducted rigorous testing of neural network models to predict hourly CI for up to 96-hour forecasts, achieving a Mean Absolute Percentage Error (MAPE) of less than 10%</li>
+                <li>Engineered a transformer-based AI model to analyze real-world EHR data, optimizing masking strategies
+                    to address 40% missing data inconsistencies, achieving 92% accuracy in early dementia detection.</li>
+                <li>Pioneered a dynamic masking framework, testing 30+ feature permutations and 9 masking strategies,
+                    identifying an optimal masking threshold that boosted model robustness by 15% AUC.</li>
+                <li>Introduced novel evaluation metrics to diagnose model bias, reducing over-prediction in non-renewable
+                    forecasts by 25% and aligning outputs with grid demand patterns.</li>
             </ul>
-            </div>
-            <div class="experience">
-                <h4>Data Analyst Intern @ Authentic Carribean Foundation Inc | November 2023 - February 2024</h4>
-                <br> Tools/Techniques: Excel, Python, Tableau, Power BI
-                <ul>
-                    <li>Utilized Excel to analyze restaurant performance data, creating pivot tables and charts that lead to a 30% rise in repeat business and online reservations, resulting in improved customer engagement.</li>
-                    <li>Identified trends among specific racial groups in Massachusetts regions by leveraging census data,
-                        leading to a 15% increase in patronage through targeted marketing campaigns.</li>
-                    <li>Developed interactive dashboards in Power BI to track key performance indicators, visualizing restaurant trends across demographics that contributed to a 10% growth in revenue</li>
-                </ul>
-                </div>
-            <div class="experience">
-                <h4>Course Assistant @ Faculty of Computing and Data Science | January 2023 - May 2024</h4>
-                <ul>
-                    <li>Led office hours to guide students through Python programming, from basic concepts to advanced techniques, including data manipulation, automation, and debugging.</li>
-                    <li>Provided hands-on instruction in machine learning algorithms and tools such as scikit-learn, Pandas, and TensorFlow, empowering students to apply these technologies to real-world problems.</li>
-                </ul>
-                </div>
-            <div class="experience">
-                <h4>IT Support Specialist @ IT Help Center | August 2022 - Present </h4>
-                <ul>
-                    <li>Provided technical support for a wide range of IT systems, troubleshooting hardware and software issues, and ensuring optimal system performance.</li>
-                    <li>Led user training sessions on system administration, cybersecurity best practices, and automation tools, empowering teams to enhance productivity and secure their digital environments.</li>
-                </ul>
-                </div>
-        
-<!-- projects -->
-<div id="projects">
-    <div class="container">
-        <h1 class="sub-title">Projects</h1>
-        <div id="projects-list">
-            <div class="project">
-                <h4>Credit Card Fraud Detection</h4>
-                <br> Tools: Python, Tableau, HTML, CSS
-                <ul>
-                    <li>Performed exploratory data analysis (EDA) to identify trends and patterns in fraudulent and non-fraudulent transactions, leveraging data visualization tools like Seaborn and Plotly.</li>
-                    <li>Applied data preprocessing techniques such as handling imbalanced data using SMOTE and feature engineering to enhance model performance.</li>
-                    <li>Deployed the machine learning model on a web application, enabling users to input transaction data and receive instant feedback on potential fraud risk.</li>
-                </ul>
-            </div>
-            <div class="project">
-                <h4>Apple Stock Price Prediction</h4>
-                <br> Tools: Python, SQL, Tableau 
-                <ul>
-                    <li>Enhanced data insights by preprocessing 12,000+ Apple stock data points and conducting feature analysis using pair plots, correlation analysis, and line plots.</li>
-                    <li>Achieved a Mean Squared Error (MSE) of 0.03 by developing a Long Short-Term Memory (LSTM) model to forecast future stock prices, resulting in highly accurate predictions.</li>
-                    <li>Ensured data accuracy and reliability by executing SQL queries on the Apple stock database to retrieve statistical information and validate predictions.</li>
-                </ul>
-            </div>
-            <div class="project">
-                <h4>Cyberbullying Classification</h4>
-                <br> Tools: Python, Power BI
-                <ul>
-                    <li>Applied NLP techniques, including tokenization, stop word removal, part-of-speech tagging, lemmatization, and sentiment analysis, to 47,000+ tweets, enhancing text data processing.</li>
-                    <li>Transformed data into binary classification format and evaluated models using Support Vector Machine and Logistic Regression, achieving a sensitivity of approximately 98%, ensuring high detection rates.</li>
-                    <li>Achieved approximately 83% accuracy by training and evaluating multiclass classification models, including Naïve Bayes, Random Forest, and Gradient Boosting, improving model performance.</li>
-                </ul>
-            </div>
-            <div class="project">
-                <h4>Covid-19 Policy Analysis with Microsoft Azure</h4>
-                <br><p>This project was an opportunity from Data Mechanics (BU's DS310) taught by Prof.Seferlis. In the project, we worked in a team to apply our data engineering skills, alongside our knowledge and data analysis skills.</p>
-                <br> The project was implemented through <a href="https://azure.microsoft.com/en-us">Microsoft Azure</a>.
-                <ul>
-                    <li>Cosmos DB: Used for storing and managing large-scale, globally distributed datasets related to Covid-19 policies and health data.</li>
-                    <li>Data Factory for creating data pipelines to perform ETL: Set up data pipelines to extract, transform, and load (ETL) data from multiple sources (e.g., government policy databases, health records) into a centralized system for further analysis.</li>
-                    <li>Synapse Analytics: Utilized for big data analytics and integration with machine learning models, allowing the team to perform complex queries, analyze large datasets, and derive insights into the effectiveness of Covid-19 policies over time.</li>
-                    <li>Microsoft Power BI: Created interactive dashboards and visualizations to present key findings, including trends and patterns in Covid-19 case rates, policy effectiveness, and regional comparisons.</li>
-                    <li>Azure VM: Hosted and ran data processing applications, machine learning models, and analysis scripts in a scalable cloud environment.</li>
-                </ul>
-            </div>
+        </div>
+        <div class="experience">
+            <h4>Data Science Research Assistant (REU CEET) @ University of Massachusetts Amherst </h4>
+            <h4>June 2024 - August 2024</h4>
+            <p class="tools">Mentors: Ramesh K. Sitaraman, Diptyaroop Maji, Abel Souza</p>
+            <p class="tools">Deliverable and Presentation: <a href="https://github.com/carbonfirst/CarbonCast">CarbonCast Github</a>, 
+                <a href="https://lass.cs.umass.edu/papers/pdf/buildsys2022-carboncast.pdf">CarbonCast Paper</a>, 
+                <a href="https://docs.google.com/presentation/d/e/2PACX-1vT9XCwEd201L8hlueT_8utpG6FtFREagAB3UqHYsF2YkCT6EPgo5oGbqMGDptXUfQ/embed?start=false&loop=false&delayms=3000" target="_blank">Final Presentation</a>
+            </p>
+            <ul>
+                <li>Developed scalable scripts to merge datasets, extract daily files, and impute missing hourly features,
+                    accelerating forecast generation by 40% and enabling real-time analysis for 500+ daily data points.</li>
+                <li>Designed and automated Python pipelines to retrieve and process missing EU regional weather data,
+                    achieving data coverage for 40+ US/EU regions and reducing manual processing time by 35%.</li>
+                <li>Synthesized insights from 10+ machine learning research papers to design a novel permutation-masking
+                    hybrid technique, reducing false positives by 22% and accelerating inference speed by 1.7x.</li>
+            </ul>
+        </div>
+        <div class="experience">
+            <h4>Data Analyst Intern @ Authentic Caribbean Foundation Inc </h4>
+            <h4>November 2023 - February 2024</h4>
+            <ul>
+                <li>Analyzed 10K+ monthly restaurant transactions using Python and Excel, pinpointing underperforming
+                    menu items and driving a 15% sales increase in Q3 2023 through targeted promotions.</li>
+                <li>Mapped U.S. Census income and population data to restaurant locations, identifying 3 high-potential
+                    suburban markets that generated $1.2M in first-year revenue post-expansion.</li>
+            </ul>
+        </div>
+        <div class="experience">
+            <h4>Other Experiences</h4>
+            <ul>
+                <li>Course Assistant @ Boston University (January 2023 - Present)
+                    <ul>
+                        <li>DS110 (Introduction to Data Science with Python)</li>
+                        <li>DS340 (Introduction to Machine Learning and AI)</li>
+                    </ul>
+                </li>
+                <li>IT Support Specialist @ IT Help Center (August 2022 - December 2024)</li>
+            </ul>
         </div>
     </div>
 </div>
 
-<!-- services -->
-<!-- <div id="services">
-    <div class="containers">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-            <i class="fa-solid fa-code"></i>
-            <h2>Web Design</h2>
-            <p>Description for the webd esign</p>
-            <a href="#">Learn more</a>
-            </div>
-            <div>
-            <i class="fa-solid fa-crop"></i>
-            <h2>UI Design</h2>
-            <p>Description for the webd esign</p>
-            <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fa-brands fa-apple"></i>
-                <h2>App Design</h2>
-                <p>Description for the webd esign</p>
-                <a href="#">Learn more</a>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<!-- portfolio -->
-<!-- <div id="portfolio">
+<!-- Projects Section -->
+<div id="projects">
     <div class="container">
-        <h1 class="sub-title">Projects</h1>
-        <div class="worklist">
-            <div class="work">
-                <img src="images/sunset2.jpg">
-                <div class="layer">
-                    <h3>Apple Stock Prediction</h3>
-                    <p>Uses python and sql to forecast the stock price of Apple within the next 3 years.</p>
-                    <a href="https://github.com/jachen2956/Apple_Stock"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/sunset3.jpg">
-                <div class="layer">
-                    <h3>Cyberbullying Classification</h3>
-                    <p>Uses multi-classification and binary-classification to classified words and tweets into different categories of cyberbullying.</p>
-                    <a href="https://github.com/jachen2956/Cyberbullying"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/sunset4.jpg">
-                <div class="layer">
-                    <h3>CarbonCast</h3>
-                    <p>Multi-day forecasting tool uses to forecast the carbon intensity of the US and EU regions.</p>
-                    <a href="https://github.com/carbonfirst/CarbonCast"><i class="fa-solid fa-link"></i></a>
-                </div>
-            </div>
+        <h1 class="sub-title"><strong>Projects</strong></h1>
+        <div class="project">
+            <h4>Second Nature</h4>
+            <p>Tools/Techniques: Python, ArcGIS</p>
+            <ul>
+                <li>Uncovered 2008 as the most frequent baseline year for carbon reduction goals by analyzing 1,500+
+                    institutional targets, linking its adoption to post-Kyoto Protocol sustainability frameworks and SIMAP tool
+                    standardization.</li>
+                <li>Streamlined emissions reporting for 72 institutions by restructuring offset datasets, resolving 100% of
+                    naming inconsistencies and filling 85% of null "Carbon Neutral" flags to clarify progress.</li>
+                <li>Visualized regional emission hotspots via ArcGIS spatial analysis, revealing a 40% faster progress lag in
+                    Southeastern states post-COVID and prompting state-level policy advocacy for renewable energy incentives.</li>
+            </ul>
         </div>
-        <a href="https://github.com/jachen2956" class="btn">See more</a>
+        <div class="project">
+            <h4>Handwriting Recognition</h4>
+            <p>Tools/Techniques: Python</p>
+            <ul>
+                <li>Built a Convolutional Recurrent Neural Network (CRNN) model using TensorFlow/Keras, achieving a 15% reduction in mean edit distance through optimized LSTM layers and CTC loss alignment.</li>
+                <li>Processed 1,000+ IAM dataset word images (Python, OpenCV), resizing to 128x32px and vectorizing labels via StringLookup, enabling efficient training-validation splits and improving model generalization.</li>
+                <li>Tested 16 custom handwritten samples, identifying gaps in real-world generalization and informing a roadmap for fine-tuning with diverse datasets to enhance practical applicability.</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h4>DC City Government </h4>
+            <p>Tools/Techniques: Python, Tableau, Google BigQuery, SQL</p>
+            <ul>
+                <li>Deployed 4 interactive Tableau dashboards featuring 7+ dynamic visualizations and 4 filters, enabling
+                    city planners to reduce backlog by 45% via targeted crew deployments.</li>
+                <li>Implemented a shapefile ingestion system to process geospatial data for Gallery Place, reducing missing
+                    data errors by 40% and enabling localized interventions that improved streetlight repair speeds by 22%.</li>
+                <li>Automated data extraction by leveraging Python, SQL, and Google BigQuery to process over 500k records
+                    monthly that resulted in 25% boost in operational efficiency for service request analysis.</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h4>Covid-19 Policy Analysis with Microsoft Azure</h4>
+            <p>Tools/Techniques: Cosmos DB, Data Factory, Synapse Analytics, Microsoft Power BI, Azure VM</p>
+            <ul>
+                <li>Stored and managed large-scale Covid-19 datasets (policies and health records) using Cosmos DB, enabling real-time global data access and reducing query latency by 30%.</li>
+                <li>Constructed ETL pipelines with Azure Data Factory, integrating 15+ government and health databases into a centralized system, improving data consistency and reducing preprocessing time by 40%.</li>
+                <li>Hosted machine learning models and analysis scripts on Azure VMs, scaling compute resources to handle 2TB+ of data and reducing runtime for complex queries by 35%.</li>
+                <li>Generated interactive Power BI dashboards to track Covid-19 case trends and policy effectiveness, identifying 20% faster recovery rates in regions with early mask mandates.</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h4>Other Projects</h4>
+            <ul>
+                <li>Apple Stock Prediction (Python, SQL)</li>
+                <li>Cyberbullying Classification (Python, Tableau)</li>
+                <li>Credit Card Fraud Detection (Python)</li>
+                <li>Pneumonia Detection Using CNN and Transfer Learning Models (Python, Streamlit)</li>
+            </ul>
+        </div>
     </div>
-</div> -->
+</div>
 
-<!-- contact -->
+<!-- Contact Section -->
 <div id="contact">
     <div class="container">
+        <h1 class="sub-title"><strong>Contact Me</strong></h1>
         <div class="row">
             <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
                 <p><i class="fa-solid fa-paper-plane"></i> jachen7@bu.edu</p>
                 <p><i class="fa-solid fa-phone"></i> 718-866-7738</p>
                 <div class="social-icons">
-                    <a href="https://instagram.com/jjas.chen"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/jason-chen-8a139329a"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/jachen2956"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://instagram.com/jjas.chen" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/jason-chen-8a139329a" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/jachen2956" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                 </div>
                 <a href="images/Resume.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
                     <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="text" name="Email" placeholder="Your Email" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <div class="button-container">
-                        <button type="submit" class="btn btn2">Submit</button>
+                        <button type="submit" class="btn btn2">Send Message</button>
                     </div>
                 </form>
                 <span id="msg"></span>
@@ -284,5 +261,6 @@
     })
   </script>
 
+<script src="script.js"></script>
 </body>
 </html>
