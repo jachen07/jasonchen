@@ -115,23 +115,47 @@ document.addEventListener('DOMContentLoaded', function() {
     // Contact form submission
     const form = document.forms['submit-to-google-sheet'];
     if (form) {
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbz6UYnapve8JX8ulqtRMqFayfIsPQSLOzcsHq58SnbU5mR2miNLvAwTduEM_jpsz1ws/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyfdPXYVQQdvA_Ap634n1_l6YCr9zw-_f3aPq0bw9dk18iRGzm0hhjgwdaD7QiaVnbx/exec';
         const msg = document.getElementById("msg");
+        const submitButton = form.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.innerHTML;
         
         form.addEventListener('submit', e => {
             e.preventDefault();
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Sending...';
+            msg.innerHTML = "";
+            
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
-                    msg.innerHTML = "Message sent successfully";
-                    setTimeout(function(){
-                        msg.innerHTML = "";
-                    }, 5000);
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response;
+                })
+                .then(() => {
+                    msg.innerHTML = "<span style='color: green;'>Message sent successfully!</span>";
                     form.reset();
                 })
-                .catch(error => console.error('Error!', error.message));
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    msg.innerHTML = "<span style='color: red;'>Failed to send message. Please try again.</span>";
+                })
+                .finally(() => {
+                    // Re-enable button
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalButtonText;
+                    
+                    // Clear success message after 5 seconds
+                    if (msg.innerHTML.includes('successfully')) {
+                        setTimeout(function(){
+                            msg.innerHTML = "";
+                        }, 5000);
+                    }
+                });
         });
     }
-    
     // Initial check for page load position
     toggleScrollMenu();
 });
