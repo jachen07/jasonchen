@@ -660,7 +660,29 @@ form textarea:focus {
 }
 
 @media only screen and (max-width: 600px) {
-    
+   #header {
+    background-size: contain;
+    background-attachment: scroll;
+    height: 0;
+    padding-top: 70%;
+    position: relative;
+    overflow: visible;
+  }
+
+  .header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) !important;
+    margin: 0;
+    width: 90%; 
+    text-align: center;
+  }
+  
+ .about-col-2 p {
+  text-align: left;
+  }   
+
   .scroll-menu ul {
     display: flex;
     flex-wrap: wrap;
@@ -668,7 +690,7 @@ form textarea:focus {
   }
 
   .scroll-menu ul li a {
-    font-size: 12px;
+    font-size: 15px;
     padding: 4px 6px;
     border-radius: 16px;
   }
