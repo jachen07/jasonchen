@@ -659,71 +659,30 @@ form textarea:focus {
     background: rgba(255, 255, 255, 0.1);
 }
 
-#sidemenu li a.active-nav,
-.scroll-menu ul li a.active-nav {
-    color: var(--highlight-color);
-    font-weight: 600;
-    position: relative;
-}
-
-#sidemenu li a.active-nav::after,
-.scroll-menu ul li a.active-nav::after {
-    content: '';
-    position: absolute;
-    width: 50%;
-    height: 2px;
-    background: var(--highlight-color);
-    bottom: -4px;
-    left: 25%;
-}
-
-@media only screen and (max-width: 768px) {
-    .scroll-menu {
-        right: auto;
-        left: 20px;
-        padding: 8px 12px;
-    }
-
-    .scroll-menu ul li {
-        margin: 0 5px;
-    }
-
-    .scroll-menu ul li a {
-        font-size: 14px;
-        padding: 5px 8px;
-    }
-}
-
-#backToTop {
-    position: fixed;
-    bottom: 40px;             /* adjust how far from the bottom */
-    right: 40px;              /* adjust how far from the right */
-    width: 50px;
-    height: 50px;
-    background: var(--highlight-color);
-    color: var(--gradient-1);
-    border: none;
-    border-radius: 50%;
+@media only screen and (max-width: 600px) {
+    
+  .scroll-menu ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1000;
+    flex-wrap: wrap;
+    gap: 8px;                            
+  }
+
+  .scroll-menu ul li a {
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 16px;
+  }
+  #contact .row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;        
+  }
+
+  #contact .contact-left,
+  #contact .contact-right {
+    width: 100%;       
+    max-width: 100%; 
+  }
+
 }
 
-#backToTop:hover {
-    background: var(--text-color);
-    color: var(--gradient-1);
-    transform: scale(1.1);
-}
-
-/* When we add .show to #backToTop, it becomes visible. */
-#backToTop.show {
-    opacity: 1;
-    visibility: visible;
-}
